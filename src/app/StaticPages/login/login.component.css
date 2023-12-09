@@ -1,7 +1,7 @@
 
 
 .bg-img{
-    background-image: url(/assets/Images/Login-bg.jpg);
+    background-image: url('./assets/Images/Login-bg.jpg');
     height: 670px;
     background-repeat: no-repeat;
     background-size: cover;
