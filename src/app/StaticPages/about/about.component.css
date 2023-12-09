@@ -76,6 +76,11 @@
     margin-top: 50px;
 }
 
+@media (max-width:768px) {
+    .first-line{
+        margin-left: 15%;
+    }
+}
 
 .card{
     
