@@ -12,7 +12,7 @@ table tr{
 }
   
   .header-bg{
-    background-image: url(/assets/Images/Candidate-Registration.png);
+    background-image: url('src\assets\Images\Candidate-Registration.png');
     background-repeat: none;
     background-size: cover;
     height: 350px;
