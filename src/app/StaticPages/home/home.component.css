@@ -1,7 +1,7 @@
 /*************Section 1 Styling starts here************/
 
 .home-sec-1 {
-    background-image: url('./assets/Images/Landing1.jpg');
+    background-image: url('src\assets\Images\Landing1.jpg');
     height: 680px;
     background-repeat: no-repeat;
     background-position: center center;
