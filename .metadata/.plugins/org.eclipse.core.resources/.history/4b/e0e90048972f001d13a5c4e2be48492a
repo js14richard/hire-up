@@ -1,0 +1,16 @@
+package com.hireup.model;
+
+import javax.persistence.Entity;
+
+@Entity
+@Table(name="")
+public class Recruiter {
+    private String companyName;
+	private String recruiterName;
+	private String contactEmail;
+	private String currentBranch;
+	private String describeCom;
+	private String companyWebssite;
+	private String userName; 
+	private String password;
+}

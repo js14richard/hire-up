@@ -1,0 +1,20 @@
+.sidenav{
+    margin-top:55px;
+    padding: 5px 0px;
+}
+
+
+ a{
+    padding:17px 15px;   
+    font-size: 20px;
+    border-bottom: 2px solid #07407b;
+    color:black;
+    transition: all 0.2s ease-in-out;    
+}
+
+.sidenav li a:hover{
+    background-color:  #07407b;
+    border-bottom: 2px solid orange;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}

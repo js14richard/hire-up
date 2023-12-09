@@ -1,0 +1,42 @@
+package com.hireup.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Entity
+@Table(name="Registered_Candidates")
+public class Candidates {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name = "cndId")
+	private int CandidateId;
+	private String firstName;
+	private String lastName;
+	private String fatherName;
+	private String email;
+	private String gender;
+	private String skills;
+	private String location; 
+	private String willingToWork;
+	private String uploadResume;
+	private String higherEducation;
+	private String workExperience;
+	private String dateOfBirth;
+	private String describeYourself;
+	private String userName;
+	private String password;
+	
+	
+	
+}

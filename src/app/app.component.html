@@ -1,0 +1,28 @@
+<!-- <router-outlet *ngIf="!isLoggedIn"></router-outlet>
+
+<ng-container *ngIf="isLoggedIn; then dashboards; else static">
+
+
+</ng-container>
+
+<ng-template #dashboards>
+    <app-dashboard-navigation></app-dashboard-navigation>
+
+    <app-footer></app-footer>
+</ng-template>
+
+<ng-template #static>
+    
+    <app-main-navigation> </app-main-navigation>
+
+</ng-template>
+
+<app-footer *ngIf="!isLoggedIn"></app-footer> -->
+
+<router-outlet *ngIf="!isLoggedIn"></router-outlet>
+
+<app-main-navigation *ngIf="!isLoggedIn"></app-main-navigation>
+
+<app-dashboard-navigation *ngIf="isLoggedIn"></app-dashboard-navigation>
+
+<app-footer></app-footer>

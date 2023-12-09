@@ -1,0 +1,52 @@
+.wrapper{
+    margin-top:12%;
+}
+
+
+#candidate-dashboard{
+    background: rgba(78, 125, 255, 0.56);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding:25px 25px;
+    border-radius: 10px;
+}
+
+
+h2{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.dashboard-content{
+    border:2px solid #07407b;
+    padding:25px;
+    text-align: center;
+    margin:25px;
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.dashboard-content:hover{
+    box-shadow: 3px 3px rgba(123, 123, 122, 0.893);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+h5{
+    font-weight: bold;
+}
+
+h6{
+    font-weight: bold;
+    margin-top: 5px;
+    padding:15px 20px;
+    background-color: #07407b;
+    display: inline-block;
+    color:white;
+    border-radius:8px;
+}
+

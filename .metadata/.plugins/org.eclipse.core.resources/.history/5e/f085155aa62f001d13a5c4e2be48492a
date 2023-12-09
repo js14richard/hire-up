@@ -1,0 +1,12 @@
+package com.hireup.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.hireup.model.Recruiters;
+
+
+@Repository
+public interface RecruiterRepo extends JpaRepository<Recruiters, String> {
+
+}

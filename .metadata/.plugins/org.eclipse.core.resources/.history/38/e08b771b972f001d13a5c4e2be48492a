@@ -1,0 +1,12 @@
+package com.hireup.model;
+
+public class Recruiter {
+	private companyName
+	private recruiterNa
+	private contactEmai
+	private currentBran
+	private describeCom
+	private companyWebs
+	private userName!: 
+	private password! :
+}

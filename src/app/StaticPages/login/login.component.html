@@ -1,0 +1,36 @@
+<div class="container-fluid bg-img d-flex align-items-center ">
+    <div class="container glass-form">
+
+        <form action="" (ngSubmit)="recLogin()">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-7 text-center">
+                    <h2 class="text-center h1">User Login</h2>
+                </div>
+
+                <div class="form-group col-md-7 mt-4">
+                  <label for="login-username"><h5>Username</h5> </label>
+                  <input type="text"
+                    class="form-control" name="userName" id="userName" [(ngModel)]="login.userName" placeholder=""> 
+                </div>
+
+                <div class="form-group col-md-7">
+                    <label for="login-password"><h5>Password</h5> </label>
+                    <input type="password"
+                      class="form-control" name="password" id="password" [(ngModel)]="login.password" placeholder=""> 
+                </div>
+
+            </div>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-4">
+                    <button class="btn btn-success btn-block"><h4>Login</h4></button>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center mt-4">
+                <a href=""><h6>Forget Password</h6></a> 
+                <a href="" routerLink="/register"><h6>Create New Account</h6></a>
+            </div>
+        </form>
+    </div>
+</div>

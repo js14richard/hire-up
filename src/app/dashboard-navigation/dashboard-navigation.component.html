@@ -1,0 +1,43 @@
+
+<div class="conainer-fluid">
+<nav class="navbar navbar-expand-sm  bg-blue navbar-dark fixed-top">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#" routerLink="">
+        <img src="/assets/Images/logo.png" height="30px" width="auto" alt="">
+    </a>
+  
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+            <h5> <i class="fa-solid fa-user" id="userimage"></i> {{UserName}} &nbsp; <i class="fa-solid fa-caret-down"></i></h5> 
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#" routerLink="rec-profile"><i class="fa-solid fa-key"></i> Change Password</a>
+          <a class="dropdown-item" href="#" (click)="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <br>
+</div>
+
+<ng-container *ngIf="userType=='recruiter'; then recruiter;else candidate">
+
+</ng-container>
+
+<ng-template #recruiter>
+  <app-rec-dboard-layout ></app-rec-dboard-layout>
+</ng-template>
+
+
+<ng-template #candidate>
+  <app-dboard-layout></app-dboard-layout>
+</ng-template>
+
+
+
+<!--Candidate Dashboard-->
+
+<!--  -->

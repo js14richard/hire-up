@@ -1,0 +1,90 @@
+package com.hireup.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Entity
+@Table(name="All_Recruiters")
+public class Recruiters {
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE )
+	private int recruiterId;
+    public String companyName;
+	private String recruiterName;
+	private String contactEmail;
+	private String currentBranch;
+	private String describeCompany;
+	private String companyWebsite;
+	private String userName; 
+	private String password;
+	public int getRecruiterId() {
+		return recruiterId;
+	}
+	public void setRecruiterId(int recruiterId) {
+		this.recruiterId = recruiterId;
+	}
+	public String getCompanyName() {
+		return companyName;
+	}
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+	public String getRecruiterName() {
+		return recruiterName;
+	}
+	public void setRecruiterName(String recruiterName) {
+		this.recruiterName = recruiterName;
+	}
+	public String getContactEmail() {
+		return contactEmail;
+	}
+	public void setContactEmail(String contactEmail) {
+		this.contactEmail = contactEmail;
+	}
+	public String getCurrentBranch() {
+		return currentBranch;
+	}
+	public void setCurrentBranch(String currentBranch) {
+		this.currentBranch = currentBranch;
+	}
+	public String getDescribeCompany() {
+		return describeCompany;
+	}
+	public void setDescribeCompany(String describeCompany) {
+		this.describeCompany = describeCompany;
+	}
+	public String getCompanyWebsite() {
+		return companyWebsite;
+	}
+	public void setCompanyWebsite(String companyWebsite) {
+		this.companyWebsite = companyWebsite;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
+	
+	
+}
+
+

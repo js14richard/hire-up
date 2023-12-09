@@ -1,0 +1,22 @@
+#footer{
+    color:white;
+    font-size: 25px;
+  }
+  
+  #footer a{
+    color:#f2a831;
+    text-decoration: underline;
+    font-style: italic;
+  }
+
+@media (max-width:996px)  {
+  #footer{
+    font-size:23px;
+  }
+}
+
+@media (max-width:764px)  {
+  #footer{
+    font-size:20px;
+  }
+}

@@ -1,0 +1,13 @@
+package com.hireup.controller;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="PostedJobs")
+public class PostJob {
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE )
+	private int jobId;
+	
+}

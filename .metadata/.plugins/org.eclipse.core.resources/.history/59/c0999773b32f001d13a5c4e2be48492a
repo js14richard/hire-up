@@ -1,0 +1,29 @@
+package com.hireup.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.hireup.Repository.LoginRepo;
+import com.hireup.model.Login;
+
+@RestController
+@CrossOrigin(origins="http://localhost:4200/")
+public class LoginController {
+	
+	@Autowired
+	private LoginRepo repo;
+	
+	@PostMapping("/userLogin")
+	public ResponseEntity<?> login(@RequestBody Login loginData) {
+		Login login=repo.findByUserName(loginData.getUserName());
+		if(loginData.getPassword().equals(candidates.getPassword()))
+			return ResponseEntity.ok(login);
+		
+		return (ResponseEntity<?>) ResponseEntity.internalServerError();
+	}
+	
+}

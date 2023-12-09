@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recruiter Registration </title>
+    </head>
+    <body>
+    <div class="register_place">
+        <form action="" method="" name="" [formGroup]="RecruiterRegistration" (ngSubmit)="RegisterCandidate()">
+
+            <div class="container-fluid d-flex align-items-end header-bg">
+                <div class="container">
+                    
+                </div>
+            </div>
+
+
+            <div class="container card">
+                <h2 class="h1 heading text-blue">
+                    RECRUITER REGISTRATION
+                </h2>
+
+            <table align="center" class="table-striped"  class="table bg-light" >
+                
+                <tr>
+                    <td> Company Name <span class="mandatory">*</span> </td> 
+                    <td> 
+                        <input class="form-control" type="text" id="company_name" placeholder="HCL Technologies" formControlName="companyName" [(ngModel)]="recReg.companyName">
+                        <div *ngIf="companyName.invalid && companyName.touched">
+                            <small class="text-danger" *ngIf="companyName.errors?.['required']"> Company Name is Required </small>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Recruiter Name <span class="mandatory">*</span> </td> 
+                    <td> 
+                        <input class="form-control" type="text" id="recuriter_name" formControlName="recruiterName" [(ngModel)]="recReg.recruiterName"> 
+                        <div *ngIf="recruiterName.invalid && recruiterName.touched">
+                            <small class="text-danger" *ngIf="recruiterName.errors?.['required']">Recruiter Name is Required</small>
+                            <small class="text-danger" *ngIf="recruiterName.errors?.['minlength']">Recruiter Name Should Contain Atleast 3 Characters</small>
+                            <small class="text-danger" *ngIf="recruiterName.errors?.['pattern']">Recruiter Name Should Contain Only Alphabets</small>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Contact Email <span class="mandatory">*</span></td> 
+                    <td> 
+                        <input class="form-control" type="email" id="recruiter_email" formControlName="email" [(ngModel)]="recReg.contactEmail">
+                        <div *ngIf="email.invalid && email.touched">
+                            <small class="text-danger" *ngIf="email.errors?.['required']">Email is Required</small>
+                            <small class="text-danger" *ngIf="email.errors?.['email']">Enter a Valid Email</small>
+                        </div>
+                    </td>
+                </tr>
+                <tr> 
+                    <td> Current Branch<span class="mandatory">*</span></td> 
+                    <td> 
+                        <input class="form-control" type="trxt"  id="Current_branch" formControlName="currentBranch" [(ngModel)]="recReg.currentBranch"> 
+                        <div *ngIf="currentBranch.invalid && currentBranch.touched">
+                            <small class="text-danger" *ngIf="currentBranch.errors?.['required']">CurrentBranch is Required</small>
+                            <small class="text-danger" *ngIf="currentBranch.errors?.['minlength']">Branch Name should contain alteast 3 characters</small>
+                        </div>
+                    </td>
+                </tr>
+                <tr> 
+                    <td> Describe Company <span class="mandatory">*</span></td> 
+                    <td> 
+                        <textarea class="form-control" id="describe_company" formControlName="describeCompany" [(ngModel)]="recReg.describeCompany"> 
+
+                        </textarea>
+                        <div *ngIf="describeCompany.invalid && describeCompany.touched">
+                            <small class="text-danger" *ngIf="describeCompany.errors?.['required']">
+                                Describing Company is Required
+                            </small>
+
+                            <small class="text-danger" *ngIf="describeCompany.errors?.['minlength']">
+                                Describe Company Should Contain Atleast 30 Words.
+                            </small>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Company Website <span class="mandatory">*</span></td> 
+                    <td> 
+                        <input class="form-control" type="url" id="company_website" formControlName="companyWebsite" [(ngModel)]="recReg.companyWebsite">
+
+                        <div *ngIf="companyWebsite.invalid && companyWebsite.touched">
+                            <small class="text-danger" *ngIf="companyWebsite.errors?.['required']">
+                                Company Website is Required
+                            </small>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Username
+                         <span class="mandatory">*</span></td> 
+                    <td> 
+                        <input class="form-control" type="text" id="recruiter_username" formControlName="userName" [(ngModel)]="recReg.userName">
+                        <div *ngIf="userName.invalid && userName.touched">
+                            <small class="text-danger" *ngIf="userName.errors?.['required']">
+                                Username is Required
+                            </small>
+
+                            <small class="text-danger" *ngIf="userName.errors?.['minlength']">
+                                Username Should Contain Atleast 5 characters.
+                            </small>
+                        </div>
+                    </td>
+                </tr>
+                <tr> 
+                    <td> Password <span class="mandatory">*</span></td> 
+                    <td> 
+                        <input class="form-control" type="text" id="recruiter_password" placeholder="Ex:Myname@7898" formControlName="password" [(ngModel)]="recReg.password">
+                        <div *ngIf="password.invalid && password.touched">
+                            <small class="text-danger" *ngIf="password.errors?.['required']">
+                                Password is Required
+                            </small>
+
+                            <small class="text-danger" *ngIf="password.errors?.['pattern']">
+                                Password Should have 8 Characters and It should Contain a Capital letter, Small letter, Special Character 
+                            </small>
+                        </div> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>Trems & Conditions <span class="mandatory">*</span> </td> 
+                    <td>
+                        <input  type="checkbox" id="terms&conditions" formControlName="termsAndConditions"> &nbsp; <label for="terms&conditions"> I agree Trems and Conditions </label>
+
+                        <div class="text-danger" *ngIf="termsAndConditions.invalid">
+                            Accept our Terms and Conditions to Register
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>  <button type="submit" class="btn btn-success" [disabled]="RecruiterRegistration.invalid">Submit</button></td>
+                    <td><button type="reset" class="btn btn-primary">Reset</button></td> 
+                </tr>
+                
+            </table>
+
+        </div>
+        </form>
+    
+    </div>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+package com.hireup.Repository;
+
+public interface RecruiterReope {
+
+}

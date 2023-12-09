@@ -1,0 +1,12 @@
+package com.hireup.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+import com.hireup.model.*;
+
+@RestController
+public class LoginController {
+	
+	@Autowired
+	
+	
+}

@@ -1,0 +1,60 @@
+
+/************ Home Registration Starts Here *************/
+
+.home-register{
+    background-color: #ceebf4;
+  }
+  
+  .home-register a{
+    color:white;
+  
+  }
+  
+  
+  .home-register .btn-info{
+    background-color: #07407b;
+    border-radius: 10px;
+    border: none;
+    border: 3px solid #07407b;
+    padding:15px;
+    font-size: 20px;
+  }
+  
+  .home-register .btn-info:hover{
+    border: 3px solid orange;
+  }
+  
+  
+  .home-register a i{
+    color:white;
+  }
+  
+  .home-register p{
+    line-height: 70px;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  
+  @media(max-width:764px) {
+     .home-register p{
+        text-align: center;
+      }
+      .home-register{
+        text-align: center;
+      }
+  }
+  
+  
+  @media (max-width:996px) {
+     .home-register p{
+        line-height: 45px;
+        font-size: 25px;
+      }
+  }
+  
+  
+  
+  
+  /************ Home Registration Ends Here *************/
+  
+  

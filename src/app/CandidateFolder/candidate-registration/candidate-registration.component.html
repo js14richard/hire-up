@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+
+    <div class="container-fluid d-flex align-items-end header-bg">
+        <div class="container">
+            
+        </div>
+    </div>
+
+    <div class="container pt-3">
+        <div class=" card">
+            <h2 class="h1 heading text-blue card-header">
+                CANDIDATE REGISTRATION
+            </h2>
+
+            <form action="" [formGroup]="CandidateRegistration" (ngSubmit)="RegisterCandidate()">
+                <table  class=" table table-striped" align="center">
+                    <tr>
+                        <td > First Name<span class="mandatory">*</span> </td> 
+                        <td>
+                            <input class="form-control" formControlName="firstName" type="text" id="firstName" name="firstName" placeholder="Enter Your First Name" [(ngModel)]="candReg.firstName"> 
+                            <div class="text-danger" *ngIf="firstName.invalid && firstName.touched">
+                                <span *ngIf="firstName.errors?.['required']">
+                                    First Name Is Required
+                                </span>
+                                <span *ngIf="firstName.errors?.['pattern']">
+                                    First Name Should Not Contain Numbers
+                                </span>
+                                <span *ngIf="firstName.errors?.['minlength']">
+                                    First Name Should Contain Atleast 3 Charactors
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td > Last Name <span class="mandatory">*</span></td> 
+                        <td>
+                            <input class="form-control" formControlName="lastName" type="text" id="lname-of-candiadte" placeholder="Enter Your Last Name" [(ngModel)]="candReg.lastName"> 
+                            <div class="text-danger" *ngIf="lastName.invalid && lastName.touched">
+                                <span *ngIf="lastName.errors?.['required']">
+                                    Last Name Is Required
+                                </span>
+                                <span *ngIf="lastName.errors?.['pattern']">
+                                    Last Name Should Not Contain Numbers
+                                </span>
+                                <span *ngIf="lastName.errors?.['minlength']">
+                                    Last Name Should Contain Atleast 3 Charactors
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td >Father Name <span class="mandatory">*</span></td> 
+                        <td> 
+                            <input class="form-control" formControlName="fatherName" type="text" id="fathername-of-candidate" name="fatherName" [(ngModel)]="candReg.fatherName">
+                            <div class="text-danger" *ngIf="fatherName.invalid && fatherName.touched">
+                                <span *ngIf="fatherName.errors?.['required']">
+                                    Father Name Is Required
+                                </span>
+                                <span *ngIf="fatherName.errors?.['pattern']">
+                                    Father Name Should Not Contain Numbers
+                                </span>
+                                <span *ngIf="fatherName.errors?.['minlength']">
+                                    Father Name Should Contain Atleast 3 Charactors
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+
+                <tr> 
+                        <td> Gender <span class="mandatory">*</span>
+                            
+                        </td> 
+                        <td>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" id="male" name="gender" value="male" formControlName="gender" [(ngModel)]="candReg.gender">Male
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="gender" value="female" formControlName="gender" [(ngModel)]="candReg.gender">Female
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="gender" value="others" formControlName="gender" [(ngModel)]="candReg.gender">Others
+                                </label>
+                            </div> 
+
+                            <div class="text-danger" *ngIf="gender.invalid && gender.touched">
+                                <span *ngIf="gender.errors?.['required']">
+                                    Gender Is Required
+                                </span>
+                            </div>
+
+                        </td>
+
+                    </tr> 
+
+
+                    <tr>
+                        <td>Email<span class="mandatory">*</span></td> 
+                        <td>
+                            <input class="form-control" formControlName="email" type="email" id="email-of-candidate" placeholder="Enter Your Email" name="email" [(ngModel)]="candReg.email"> 
+                            <div class="text-danger" *ngIf="email.invalid && email.touched">
+                                <span *ngIf="email.errors?.['required']">
+                                    Email Name Is Required
+                                </span>
+                                <span *ngIf="email.errors?.['email']">
+                                    Enter A Valid Email
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td>Higher Education Qualifiaction<span class="mandatory">*</span> </td> 
+                        <td> 
+                            <select class="form-control" formControlName="higherEducation" name="higherEducation" [(ngModel)]="candReg.higherEducation">
+                                <option value="">Highest Qualification</option>
+                                <option id="10"> 10 </option>
+                                <option id="12"> 12 </option>
+                                <option id="degree"> Graduate </option>
+                                <option id="b.tech"> Post Graduate</option>
+                                <option value="phd">PhD</option>
+                            </select> 
+                            <div *ngIf="higherEducation.invalid && higherEducation.touched">
+                                <small class="text-danger">Please Select Higher Education</small>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr><td>Work Experience</td> 
+                        <td>
+                            <select class="form-control" formControlName="workExperience" name="workExperience" [(ngModel)]="candReg.workExperience">
+                                <option value="">Work Experience</option>
+                                <option value="0">Fresher</option>
+                                <option value="0-2">0-2 Years</option>
+                                <option value="2-5">2-5 Years</option>
+                                <option value="5+">More than 5 Years</option>
+                            </select>
+                            <div *ngIf="workExperience.invalid && workExperience.touched">
+                                <small class="text-danger">Please Select Work Experience</small>
+                            </div>
+                        </td>
+                    </tr>                          
+                    <tr><td>Location<span class="mandatory">*</span></td>
+
+                        <td>
+                        
+                                 <select class="form-control" formControlName="location" id="inputState" name="location" [(ngModel)]="candReg.location">
+                                            <option value="SelectState">Select State</option>
+                                            <option value="Andra Pradesh">Andra Pradesh</option>
+                                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                            <option value="Assam">Assam</option>
+                                            <option value="Bihar">Bihar</option>
+                                            <option value="Chhattisgarh">Chhattisgarh</option>
+                                            <option value="Goa">Goa</option>
+                                            <option value="Gujarat">Gujarat</option>
+                                            <option value="Haryana">Haryana</option>
+                                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                            <option value="Jharkhand">Jharkhand</option>
+                                            <option value="Karnataka">Karnataka</option>
+                                            <option value="Kerala">Kerala</option>
+                                            <option value="Madya Pradesh">Madya Pradesh</option>
+                                            <option value="Maharashtra">Maharashtra</option>
+                                            <option value="Manipur">Manipur</option>
+                                            <option value="Meghalaya">Meghalaya</option>
+                                            <option value="Mizoram">Mizoram</option>
+                                            <option value="Nagaland">Nagaland</option>
+                                            <option value="Orissa">Orissa</option>
+                                            <option value="Punjab">Punjab</option>
+                                            <option value="Rajasthan">Rajasthan</option>
+                                            <option value="Sikkim">Sikkim</option>
+                                            <option value="Tamil Nadu">Tamil Nadu</option>
+                                            <option value="Telangana">Telangana</option>
+                                            <option value="Tripura">Tripura</option>
+                                            <option value="Uttaranchal">Uttaranchal</option>
+                                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                            <option value="West Bengal">West Bengal</option>
+                                            <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                            <option value="Chandigarh">Chandigarh</option>
+                                            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                            <option value="Daman and Diu">Daman and Diu</option>
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="Lakshadeep">Lakshadeep</option>
+                                            <option value="Pondicherry">Pondicherry</option>
+                                        </select> 
+                                        <div *ngIf="location.invalid && location.touched">
+                                            <small class="text-danger">Please Select Your Location</small>
+                                        </div>
+                                    </td>
+                                </tr>       
+                
+                <!--skills start-->   <tr>
+                        <td>Skills <span class="mandatory">*</span></td> 
+                        <td>
+                            <input class="form-control" formControlName="skills" type="text" id="skills" placeholder="Java, Angular, React" name="skills" [(ngModel)]="candReg.skills"> 
+                            <div *ngIf="skills.invalid && skills.touched">
+                                <small class="text-danger" *ngIf="skills.errors?.['required']">Please Enter Your Skills</small>
+                                <small class="text-danger" *ngIf="skills.errors?.['minlength']">Skills Should Atleast Contain 5 Charactors</small>
+                            </div>
+                        </td>
+                            
+
+                    <tr>
+                        <td>Date of Birth<span class="mandatory">*</span> </td> 
+                        <td> 
+                            <input class="form-control" formControlName="dateOfBirth" type="date" id="dob" size="30" class="form-control" min="1970-01-01" max="2015-01-01"  name="dateOfBirth" [(ngModel)]="candReg.dateOfBirth">
+                            <div *ngIf="skills.invalid && skills.touched">
+                                <small class="text-danger" *ngIf="skills.errors?.['required']">Date of Birth Is Required</small>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Willing To Work</td>  
+                        <td> 
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="willingToWork" formControlName="willingToWork" value="Within the state" [(ngModel)]="candReg.willingToWork">Within The State
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="willingToWork" formControlName="willingToWork"  value="Outside the state" [(ngModel)]="candReg.willingToWork">Other States
+                                </label>
+                            </div>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>Describe Yourself </td> 
+                        <td>
+                            <textarea class="form-control" id="describe_yourself" formControlName="describeYourself" placeholder="Describe Yourself...." name="describeYourself" [(ngModel)]="candReg.describeYourself"> </textarea> 
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>Username<span class="mandatory">*</span></td> 
+                        <td>
+                            <input class="form-control" formControlName="userName" type="text" id="Candidate_User_name" name="userName" [(ngModel)]="candReg.userName"> 
+                            <div *ngIf="userName.invalid && userName.touched">
+                                <small class="text-danger" *ngIf="userName.errors?.['required']">Username is Required</small>
+                                <small class="text-danger" *ngIf="userName.errors?.['minlength']">Username Should Atleast Contain 5 Charactors</small>
+                                <small class="text-danger" *ngIf="userName.errors?.['pattern']">Username Should Atleast Contain 2 Numbers</small>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password<span class="mandatory">*</span></td> 
+                        <td> 
+                            <input class="form-control" formControlName="password" type="text" id="can_password" placeholder="Ex: Hireup@123" name="password" [(ngModel)]="candReg.password"> 
+                            <div *ngIf="password.invalid && password.touched">
+                                <small class="text-danger" *ngIf="password.errors?.['required']">Password is Required</small>
+                                <small class="text-danger" *ngIf="password.errors?.['minlength']">Password Should Atleast Contain 8 Charactors</small>
+                                <small class="text-danger" *ngIf="password.errors?.['pattern']">Password Should have 8 Characters and It should Contain a Capital letter, Small letter, Special Character </small>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Terms & Conditions<span class="mandatory">*</span></td> 
+                        <td >
+                            <input  type="checkbox" id="terms&conditions" value="1" formControlName="termsAndConditions"> &nbsp; <label for="terms&conditions"> I agree Trems and Conditions </label> 
+                            <div class="text-danger" *ngIf="termsAndConditions.invalid">Agree the Terms and Conditions to Register</div>
+                        </td>
+                    </tr> 
+                    
+                <tr>
+                        <td>  
+                            <button type="submit" class="btn btn-success" [disabled]="CandidateRegistration.invalid">Register</button>
+                        </td>
+                        <td>
+                            <button type="reset" class="btn btn-primary">Reset</button>
+                        </td> 
+                </tr>
+             </table>
+            </form> 
+            
+
+        </div> 
+    </div>
+
+
+<script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(s);
+    });
+</script>
+    
+
+</body>
+</html>
+
+

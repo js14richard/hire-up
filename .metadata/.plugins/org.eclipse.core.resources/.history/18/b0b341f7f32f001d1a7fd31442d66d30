@@ -1,0 +1,9 @@
+package com.hireup.controller;
+
+import javax.persistence.Entity;
+
+@Entity
+@Table(name="PostedJobs")
+public class PostJob {
+	
+}

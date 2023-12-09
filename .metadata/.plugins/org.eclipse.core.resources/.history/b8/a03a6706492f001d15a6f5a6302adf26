@@ -1,0 +1,6 @@
+package com.hireup.Repository;
+
+public interface CandidateRepo {
+
+	@Respository
+}

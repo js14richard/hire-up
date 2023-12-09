@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h2>Shortlisted Candidates</h2>
+    <div class="table-responsive">
+        <table datatable id="SearchJobs" class="table table-striped table-bordered table-hover" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Qualification</th>
+                    <th>Skills</th>
+                    <th>Experience</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let candidate of ShortlistedCandidates">
+                    <td >{{candidate.Name}}</td>  <!--*ngIf="candidate.Qualification===candidate.skills"-->
+                    <td>{{candidate.Qualification}}</td>
+                    <td>{{candidate.Skills}}</td>
+                    <td>{{candidate.Experience}}</td>
+                    <td>{{candidate.Location}}</td>
+                    <td class="apply-btn"><button class="btn btn-info">Shortlist</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+</body>
+</html>

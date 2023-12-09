@@ -1,0 +1,85 @@
+package com.hireup.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Entity
+@Table(name="All_Recruiters")
+public class Recruiters {
+	@Id
+	private int recruiterId;
+    private String companyName;
+	private String recruiterName;
+	private String contactEmail;
+	private String currentBranch;
+	private String describeCom;
+	private String companyWebssite;
+	private String userName; 
+	private String password;
+	public int getRecruiterId() {
+		return recruiterId;
+	}
+	public void setRecruiterId(int recruiterId) {
+		this.recruiterId = recruiterId;
+	}
+	public String getCompanyName() {
+		return companyName;
+	}
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+	public String getRecruiterName() {
+		return recruiterName;
+	}
+	public void setRecruiterName(String recruiterName) {
+		this.recruiterName = recruiterName;
+	}
+	public String getContactEmail() {
+		return contactEmail;
+	}
+	public void setContactEmail(String contactEmail) {
+		this.contactEmail = contactEmail;
+	}
+	public String getCurrentBranch() {
+		return currentBranch;
+	}
+	public void setCurrentBranch(String currentBranch) {
+		this.currentBranch = currentBranch;
+	}
+	public String getDescribeCom() {
+		return describeCom;
+	}
+	public void setDescribeCom(String describeCom) {
+		this.describeCom = describeCom;
+	}
+	public String getCompanyWebssite() {
+		return companyWebssite;
+	}
+	public void setCompanyWebssite(String companyWebssite) {
+		this.companyWebssite = companyWebssite;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
+}
+
+

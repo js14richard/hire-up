@@ -1,0 +1,24 @@
+package com.hireup.controller;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="PostedJobs")
+public class PostJob {
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE )
+	private int jobId;
+	private String jobRole;
+	private int noOfVacancies;
+	private String companyName;
+	private String workExperience;
+	private String skills;
+	private String location;
+	private String gender;
+	
+	
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h2>Posted Jobs</h2>
+    <div class="table-responsive">
+        <table datatable id="SearchJobs" class="table table-striped table-bordered table-hover" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Job Role</th>
+                    <th>Qualification</th>
+                    <th>Location</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let job of PostedJobs">
+                    <td>{{job.jobRole}}</td>
+                    <td>{{job.higherEducationQualification}}</td>
+                    <td>{{job.location}}</td>
+                    <td>{{job.salaryRange}}</td>
+                    <td class="apply-btn">
+                        <button class="btn btn-danger" (click)="DeleteJob(job.jobId)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+
+</body>
+</html>

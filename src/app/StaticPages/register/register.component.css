@@ -1,0 +1,29 @@
+.user-selection{
+    margin-top:120px;
+}
+
+.user-selection h4{
+    font-size: 25px;
+
+}
+
+.user-selection .row{
+    padding:3px;
+}
+
+.user-selection .row .user-type{
+    padding:10px;
+}
+
+.user-selection a{
+    text-decoration: none;
+}
+
+.btn-info{
+    background-color: #07407b;
+}
+
+.btn-info:hover{
+    background-color: #fab340;
+    color:black;
+}

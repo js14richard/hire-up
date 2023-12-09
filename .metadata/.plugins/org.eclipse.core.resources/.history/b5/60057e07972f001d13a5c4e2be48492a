@@ -1,0 +1,5 @@
+package com.hireup.model;
+
+public class Recruiter {
+	
+}

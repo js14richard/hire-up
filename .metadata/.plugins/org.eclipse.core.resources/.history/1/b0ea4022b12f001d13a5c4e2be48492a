@@ -1,0 +1,13 @@
+package com.hireup.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.hireup.model.Login;
+
+
+@Repository
+public interface CandidateRepo extends JpaRepository<Login, Integer>{
+
+	Login findByUserId(String userName)
+}

@@ -1,0 +1,6 @@
+package com.hireup.Repository;
+
+@Repository
+public interface LoginRepo {
+
+}

@@ -1,0 +1,91 @@
+/*============= About intro section starts here ============*/
+
+
+.about-intro{
+    margin-top: 100px;
+}
+
+.about-intro h4{
+    font-weight: bold;
+}
+
+@media (max-width:996px) {
+    h4{
+        text-align:center;
+    }
+}
+
+
+.about-intro p{
+    text-align: justify;
+    margin-top:15px;
+}
+
+.about-intro img{
+    border-radius: 8px;
+}
+
+.btn-info{
+    background-color: orange;
+    border:2px solid orange;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-info:hover{
+    border:2px solid #07407b;  
+    transition: all 0.2s ease-in-out;
+}
+
+
+/*============= About intro section ends here ============*/
+
+
+/*============= How it works section starts here ============*/
+
+.how-it-works{
+    margin-top:55px;
+}
+
+.how-it-works h2{
+    font-weight: bold;
+    text-align:center;
+}
+
+.steps{
+    height: max-content;
+    margin-top:25px;
+    padding:20px;
+}
+
+.steps h4{
+    font-weight: 550;
+
+}
+
+.steps i{
+    color:orange;
+    font-size: 40px;
+}
+
+/*============= How it works section ends here ============*/
+
+
+/************ Meet Our Team *****************/
+
+.team-members{
+    margin-top: 50px;
+}
+
+
+.card{
+    
+    transition: all 0.2s ease-in-out;
+    box-shadow: 5px 5px #849df0;
+}
+
+.card:hover{
+    box-shadow: 5px 5px #ffffff;
+    cursor: pointer;
+    border:3px solid orange;
+    transition: all 0.3s ease-in-out;
+}

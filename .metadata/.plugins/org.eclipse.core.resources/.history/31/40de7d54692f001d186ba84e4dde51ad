@@ -1,0 +1,136 @@
+package com.hireup.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Entity
+@Table(name="All_Candidates")
+public class Candidates {
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE )
+	private int candidateId; 
+	private String firstName;
+	private String lastName;
+	private String fatherName;
+	private String email;
+	private String gender;
+	private String skills;
+	private String location; 
+	private String willingToWork;
+	private String uploadResume;
+	private String higherEducation;
+	private String workExperience;
+	
+	public Candidates() {}
+	
+	
+	public Candidates(int candidateId, String firstName, String lastName, String fatherName, String email,
+			String gender, String skills, String location, String willingToWork, String uploadResume,
+			String higherEducation, String workExperience, String dateOfBirth, String describeYourself, String userName,
+			String password) {
+		super();
+		this.candidateId = candidateId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.fatherName = fatherName;
+		this.email = email;
+		this.gender = gender;
+		this.skills = skills;
+		this.location = location;
+		this.willingToWork = willingToWork;
+		this.uploadResume = uploadResume;
+		this.higherEducation = higherEducation;
+		this.workExperience = workExperience;
+		this.dateOfBirth = dateOfBirth;
+		this.describeYourself = describeYourself;
+		this.userName = userName;
+		this.password = password;
+	}
+	public int getCandidateId() {
+		return candidateId;
+	}
+	public void setCandidateId(int candidateId) {
+		this.candidateId = candidateId;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getFatherName() {
+		return fatherName;
+	}
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getSkills() {
+		return skills;
+	}
+	public void setSkills(String skills) {
+		this.skills = skills;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public String getWillingToWork() {
+		return willingToWork;
+	}
+	public void setWillingToWork(String willingToWork) {
+		this.willingToWork = willingToWork;
+	}
+	public String getUploadResume() {
+		return uploadResume;
+	}
+	public void setUploadResume(String uploadResume) {
+		this.uploadResume = uploadResume;
+	}
+	public String getHigherEducation() {
+		return higherEducation;
+	}
+	public void setHigherEducation(String higherEducation) {
+		this.higherEducation = higherEducation;
+	}
+	public String getWorkExperience() {
+		return workExperience;
+	}
+	public void setWorkExperience(String workExperience) {
+		this.workExperience = workExperience;
+	}
+	public String getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public void setDateOfBirth(String dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}

@@ -1,0 +1,6 @@
+package com.hireup.controller;
+
+@Entity
+public class PostJob {
+
+}

@@ -1,0 +1,42 @@
+
+
+.bg-img{
+    background-image: url(/assets/Images/Login-bg.jpg);
+    height: 670px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.glass-form{
+    max-width: max-content;
+    height: max-content;
+    padding:35px 10px;
+    background: rgba(173, 205, 250, 0.507);
+    box-shadow: 0 8px 32px 0 rgba(43, 55, 210, 0.37);
+    backdrop-filter: blur( 11px );
+    -webkit-backdrop-filter: blur( 11px );
+    border-radius: 15px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.btn{
+    padding:7px 35px;
+}
+
+h6{
+    display: inline-block;
+    text-align: center;
+}
+
+a h6{
+    color: black;
+    text-decoration:underline;
+    margin:2px 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+a h6:hover{
+    color:white;
+    transition: all 0.2s ease-in-out;
+}

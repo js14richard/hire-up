@@ -1,0 +1,17 @@
+h2{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 65px;
+}
+
+.apply-btn{
+    text-align: center;
+}
+
+td{
+    vertical-align: baseline;
+}
+
+p{
+    text-align: center;
+}

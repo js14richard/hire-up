@@ -1,0 +1,18 @@
+.sidebar{
+    height:650px;
+
+    background: radial-gradient(circle at 10% 20%, rgb(255, 200, 124) 0.1%, rgb(252, 251, 121) 90%);
+
+    padding: 0px;
+}
+
+.dboard-content{
+    height:650px;
+    overflow-y: auto;
+    background: rgba( 197, 236, 255, 0.1 );
+    box-shadow: 0 8px 10px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}

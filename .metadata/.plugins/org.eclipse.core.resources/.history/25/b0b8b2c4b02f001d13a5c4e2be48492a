@@ -1,0 +1,11 @@
+package com.hireup.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Login {
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE )
+	private String userName;
+	private String password;
+}

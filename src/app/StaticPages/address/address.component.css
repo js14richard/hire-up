@@ -1,0 +1,56 @@
+p{
+    font-size: 20px;
+    font-weight:550;
+    margin-top: 10px;
+}
+
+.social-media-icons li{
+    list-style-type:none ;
+    padding:8px;
+}
+
+.social-media-icons{
+    margin-left:-80px;
+}
+
+a{
+    color:white;
+}
+
+li a{
+    font-size: 30px;
+    color:white;
+    transition: all 0.3s ease-in-out;
+}
+
+.fb:hover{
+    color:#3a3ac0;
+    transition: all 0.3s ease-in-out;
+}
+.insta:hover{
+    color:red;
+    transition: all 0.3s ease-in-out;
+}
+.yt:hover{
+    color:rgb(168, 34, 34);
+    transition: all 0.3s ease-in-out;
+}
+.tw:hover{
+    color:#82e6f8;
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media (max-width: 767px) {
+    .social-media-icons {
+        margin-left:3px;
+    }
+
+    .social-media-icons li{
+        display: inline-block;
+        padding-left:35px;
+    }
+    .addrs-location{
+        text-align: center;
+    }
+}

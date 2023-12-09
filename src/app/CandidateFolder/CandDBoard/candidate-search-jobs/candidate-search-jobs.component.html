@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h2>Search Jobs</h2>
+    <div class="table-responsive">
+        <table datatable [dtOptions]="dtOptions" id="SearchJobs" class="table table-striped table-bordered table-hover" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Job Role</th>
+                    <th>Qualification</th>
+                    <th>Company Name</th>
+                    <th>Location</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let job of PostedJobs">
+                    <td>{{job.jobRole}}</td>
+                    <td>{{job.higherEducationQualification}}</td>
+                    <td>{{job.companyName}}</td>
+                    <td>{{job.location}}</td>
+                    <td>{{job.salaryRange}}</td>
+                    <td class="apply-btn"><button class="btn btn-info" data-toggle="modal" data-target="#viewJob" (click)="ViewJob(job.jobId)">View Details</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade mt-5" id="viewJob" data-backdrop="false" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-scrollable model-sm">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title h3 .font-weight-bold" id="staticBackdropLabel">Job Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <tr>
+                        <td class="font-weight-bold">Job Role </td>
+                        <td class="font-weight-bold">: </td>
+                        <td>{{viewJob.jobRole}}</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-weight-bold">Company </td>
+                        <td class="font-weight-bold">: </td>
+                        <td>{{viewJob.companyName}}</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-weight-bold">Qualification </td>
+                        <td class="font-weight-bold">: </td>
+                        <td> {{viewJob.higherEducationQualification}}</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-weight-bold">Skills Recuired</td>
+                        <td class="font-weight-bold">: </td>
+                        <td>{{viewJob.skills}}</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-weight-bold">Experience </td>
+                        <td class="font-weight-bold">: </td>
+                        <td> {{viewJob.workExperience}}</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-weight-bold">Work Timing </td>
+                        <td class="font-weight-bold">: </td>
+                        <td> {{viewJob.workTiming}}</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-weight-bold">Salary Range </td>
+                        <td class="font-weight-bold">: </td>
+                        <td> {{viewJob.salaryRange}}</td>
+                    </tr>
+
+                    <tr>
+                        <td class="font-weight-bold">Job Description </td>
+                        <td class="font-weight-bold">: </td>
+                        <td> {{viewJob.jobDescription}}</td>
+                    </tr>
+
+                </table>
+
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-warning ">Apply Job</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    
+    
+
+</body>
+</html>

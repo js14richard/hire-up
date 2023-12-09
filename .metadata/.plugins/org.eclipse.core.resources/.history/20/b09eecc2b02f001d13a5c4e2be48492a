@@ -1,0 +1,7 @@
+package com.hireup.model;
+
+@Entity
+public class Login {
+	private String userName;
+	private String password;
+}
